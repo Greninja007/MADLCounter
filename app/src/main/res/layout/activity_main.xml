@@ -23,18 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/circularProgressBar"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:cpb_background_progressbar_color="#b6bbd8"
-        app:cpb_background_progressbar_width="5dp"
-        app:cpb_progress_direction="to_right"
-        app:cpb_progressbar_color="#BA042D"
-        android:layout_marginVertical="40dp"
-        app:cpb_progress="0"
-        app:cpb_progressbar_width="5dp"
-        app:cpb_round_border="false" />
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="40dp"
+            app:cpb_background_progressbar_color="#b6bbd8"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progress="0"
+            app:cpb_progress_max="9999"
+            app:cpb_progress_direction="to_right"
+            app:cpb_progressbar_color="#BA042D"
+            app:cpb_progressbar_width="5dp"
+            app:cpb_round_border="false" />
 
         <TextView
             android:id="@+id/tvCounter"
@@ -54,7 +55,7 @@
         android:layout_gravity="center"
         app:backgroundTint="#BA042D"
         app:icon="@drawable/ic_baseline_add"
-        android:text="Increment"
+        android:text="CHECK IN"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -65,7 +66,7 @@
         android:layout_gravity="center"
         app:icon="@drawable/ic_baseline_remove"
         app:backgroundTint="#BA042D"
-        android:text="Decrement"
+        android:text="CHECK OUT"
         />
 
 </LinearLayout>

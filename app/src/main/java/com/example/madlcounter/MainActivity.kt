@@ -19,18 +19,20 @@ class MainActivity : AppCompatActivity() {
         val progress = findViewById<com.mikhaellopez.circularprogressbar.CircularProgressBar>(R.id.circularProgressBar)
 
         increment.setOnClickListener {
-            a++
-            if(a%100==0){
-                progress.progressMax = (a+100).toFloat()
+            a+=1
+            if(a>9999){
+                Toast.makeText(this,"You've reached the maximum threshold",Toast.LENGTH_SHORT).show()
             }
-            tvDisplay.text = a.toString()
-            progress.progress = a.toFloat()
+            else{
+                tvDisplay.text = a.toString()
+                progress.progress = a.toFloat()
+            }
+
         }
 
         decrement.setOnClickListener {
             if(a<=0){
                 Toast.makeText(this,"You've reached the minimum threshold",Toast.LENGTH_SHORT).show()
-                progress.progressMax = 100f
             }
             else {
                 a--
